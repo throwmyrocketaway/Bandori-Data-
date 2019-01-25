@@ -6,3 +6,5 @@ Insights.txt
 .spyproject/encoding.ini
 .spyproject/vcs.ini
 .spyproject/workspace.ini
+graphs.opj
+*.png
