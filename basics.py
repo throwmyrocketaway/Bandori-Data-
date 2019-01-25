@@ -1,7 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-df3 = pd.read_csv("3.xlsx")
+df3 = pd.read_excel("3.xlsx")
 fig = plt.figure(figsize=(18,6))
 
 a=df3.columns.tolist()
