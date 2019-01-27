@@ -172,3 +172,40 @@ plt.title("Reason for liking favourite band of people from Oceania")
 
 #plt.show(block=True)
 plt.clf()
+
+# Favourite band for people in significant age groups
+
+a149 = utils.agegrab(str149,df)
+a204 = utils.agegrab(str204,df)
+a259 = utils.agegrab(str259,df)
+
+plt.subplot2grid((2,3),(0,0))
+a149.Fband.value_counts(normalize=True).plot(kind="bar",alpha=0.5,rot=45)
+plt.title("Favourite band for people aged 14-19")
+
+plt.subplot2grid((2,3),(0,1))
+a204.Fband.value_counts(normalize=True).plot(kind="bar",alpha=0.5,rot=45)
+plt.title("Favourite band for people aged 20-24")
+
+plt.subplot2grid((2,3),(0,2))
+a259.Fband.value_counts(normalize=True).plot(kind="bar",alpha=0.5,rot=45)
+plt.title("Favourite band for people aged 25-29")
+
+#plt.show(block=True)
+plt.clf()
+
+# Reason why people in significant age groups like their favourite band
+plt.subplot2grid((2,3),(0,0))
+a149.Fbandreason.value_counts(normalize=True).plot(kind="bar",alpha=0.5,rot=45)
+plt.title("Reason people aged 14-19 like their favourite band")
+
+plt.subplot2grid((2,3),(0,1))
+a204.Fbandreason.value_counts(normalize=True).plot(kind="bar",alpha=0.5,rot=45)
+plt.title("Reason people aged 20-24 like their favourite band")
+
+plt.subplot2grid((2,3),(0,2))
+a259.Fbandreason.value_counts(normalize=True).plot(kind="bar",alpha=0.5,rot=45)
+plt.title("Reason people aged 25-29 like their favourite band")
+
+#plt.show(block=True)
+plt.clf()

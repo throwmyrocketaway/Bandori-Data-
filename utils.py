@@ -39,6 +39,10 @@ def bandgrab(x,y):
     result =y.loc[y['Fband']==x]
     return result
 
+def agegrab(x,y):
+    result = y.loc[y['Age']==x]
+    return result
+
 def reasongrab(x,y):
     result = y.loc[y['Fbandreason']==x]
     return result
