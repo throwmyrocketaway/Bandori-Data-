@@ -61,5 +61,5 @@ plt.subplot2grid((2,3),(1,1))
 oce.gender.value_counts(normalize=True).plot(kind="bar",alpha=0.5)
 plt.title("Gender spread of people from Oceania")
 
-plt.show(block=True)
+#plt.show(block=True)
 plt.clf()
