@@ -119,3 +119,56 @@ plt.title("Gender of people who most like Hello, Happy World")
 #plt.show(block=True)
 plt.clf()
 
+# Favourite bands of people in specific geographical regions
+
+nam = utils.locgrab(strnam,df)
+sam = utils.locgrab(strsam,df)
+eur = utils.locgrab(streur,df)
+sea = utils.locgrab(strsea,df)
+oce = utils.locgrab(stroce,df)
+
+plt.subplot2grid((2,3),(0,0))
+nam.Fband.value_counts(normalize=True).plot(kind="bar",alpha=0.5,rot=45)
+plt.title("Reason for liking favourite band of people from North America")
+
+plt.subplot2grid((2,3),(0,1))
+sam.Fband.value_counts(normalize=True).plot(kind="bar",alpha=0.5,rot=45)
+plt.title("Reason for liking favourite band of people from South America")
+
+plt.subplot2grid((2,3),(0,2))
+eur.Fband.value_counts(normalize=True).plot(kind="bar",alpha=0.5,rot=45)
+plt.title("Reason for liking favourite band of people from Europe")
+
+plt.subplot2grid((2,3),(1,0))
+sea.Fband.value_counts(normalize=True).plot(kind="bar",alpha=0.5,rot=45)
+plt.title("Reason for liking favourite band of people from Southeast Asia")
+
+plt.subplot2grid((2,3),(1,1))
+oce.Fband.value_counts(normalize=True).plot(kind="bar",alpha=0.5,rot=45)
+plt.title("Reason for liking favourite band of people from Oceania")
+
+#plt.show(block=True)
+plt.clf()
+
+plt.subplot2grid((2,3),(0,0))
+nam.Fbandreason.value_counts(normalize=True).plot(kind="bar",alpha=0.5,rot=45)
+plt.title("Reason for liking favourite band of people from North America")
+
+plt.subplot2grid((2,3),(0,1))
+sam.Fbandreason.value_counts(normalize=True).plot(kind="bar",alpha=0.5,rot=45)
+plt.title("Reason for liking favourite band of people from South America")
+
+plt.subplot2grid((2,3),(0,2))
+eur.Fbandreason.value_counts(normalize=True).plot(kind="bar",alpha=0.5,rot=45)
+plt.title("Reason for liking favourite band of people from Europe")
+
+plt.subplot2grid((2,3),(1,0))
+sea.Fbandreason.value_counts(normalize=True).plot(kind="bar",alpha=0.5,rot=45)
+plt.title("Reason for liking favourite band of people from Southeast Asia")
+
+plt.subplot2grid((2,3),(1,1))
+oce.Fbandreason.value_counts(normalize=True).plot(kind="bar",alpha=0.5,rot=45)
+plt.title("Reason for liking favourite band of people from Oceania")
+
+#plt.show(block=True)
+plt.clf()

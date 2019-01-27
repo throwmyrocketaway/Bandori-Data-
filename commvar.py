@@ -20,3 +20,13 @@ strbme = "The band members"
 strsty = "The story"
 strnon = "I have no favorite band"
 stroth = "Other"
+
+# Locations as variables
+
+strnam = "North America"
+streur = "Europe"
+strsea = "Southeast Asia"
+strsam = "South America"
+strcam = "Central America"
+stroce = "Oceania"
+strsas = "South Asia"

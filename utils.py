@@ -43,3 +43,6 @@ def reasongrab(x,y):
     result = y.loc[y['Fbandreason']==x]
     return result
 
+def locgrab(x,y):
+    result = y.loc[y['location']==x]
+    return result
