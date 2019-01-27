@@ -1,3 +1,5 @@
+import matplotlib.pyplot as plt
+from commvar import *
 def gendercount(x,y):
     count = 0
     for i in x['gender']:
@@ -40,3 +42,4 @@ def bandgrab(x,y):
 def reasongrab(x,y):
     result = y.loc[y['Fbandreason']==x]
     return result
+

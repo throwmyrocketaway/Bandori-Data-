@@ -1,3 +1,9 @@
+# Genders as variables
+strmle = "Male"
+strfme = "Female"
+stroge = "Other"
+strpge = "Prefer not to say"
+
 # Band names as variables
 
 strppa = "Poppin'Party"
