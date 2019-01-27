@@ -32,3 +32,11 @@ def allagecount(x):
     age8 = agecount(x,'Prefer not to say')
     result=[age1,age2,age3,age4,age5,age6,age7,age8]
     return result
+
+def bandgrab(x,y):
+    result =y.loc[y['Fband']==x]
+    return result
+
+def reasongrab(x,y):
+    result = y.loc[y['Fbandreason']==x]
+    return result
