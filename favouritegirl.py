@@ -27,6 +27,8 @@ labels =["Favourite girl is from favourite band", "Favourite girl isn't from fav
 plt.bar(y_pos,relativecounts,align='center',alpha=0.5)
 plt.xticks(y_pos,labels)
 plt.title("Spread of people whose favourite girl is from their favourite band")
-print relativecounts
 plt.show()
 
+
+    
+print df.loc

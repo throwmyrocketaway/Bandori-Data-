@@ -68,3 +68,22 @@ def bandmem(x):
         return glgmem
     else:
         return 0
+
+#countyes = 0
+#for i in range(len(df)):
+ #   a = utils.bandmem(df.Fband[i])
+  #  if a != 0:
+   #     for k in a:
+    #        if k == df.Bestgirl[i]:
+     #           countyes += 1
+
+def bestgirliter(x):
+    a = bandmem(x.Fband)
+    b = x.Bestgirl
+    result = 0
+    for i in a:
+        if i ==b:
+            result+= 1
+            break
+    return result
+    
