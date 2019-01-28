@@ -50,3 +50,21 @@ def reasongrab(x,y):
 def locgrab(x,y):
     result = y.loc[y['location']==x]
     return result
+
+def bandmem(x):
+    if x == strppa:
+        return ppamem
+    elif x==strros:
+        return rosmem
+    elif x==straft:
+        return aftmem
+    elif x==strppe:
+        return ppemem
+    elif x==strhhw:
+        return hhwmem
+    elif x==strras:
+        return rasmem
+    elif x==strglg:
+        return glgmem
+    else:
+        return 0

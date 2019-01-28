@@ -1,3 +1,5 @@
+totresponses = 1411
+
 # Genders as variables
 strmle = "Male"
 strfme = "Female"
@@ -22,6 +24,10 @@ straft = "Afterglow"
 strppe = "Pastel*Palettes"
 strros = "Roselia"
 strhhw = "Hello, Happy World!"
+strglg = "Glitter*Green"
+strras = "RAISE A SUILEN"
+
+strallb = [strppa,straft,strppe,strros,strhhw,strglg,strras]
 
 # Band reasons as variables
 
