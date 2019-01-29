@@ -7,28 +7,31 @@ rcParams.update({'figure.autolayout': True})
 import numpy as np
 
 df = pd.read_excel("3.xlsx")
+# Grab each repsondents favourite band, seperate by answer
+ppa = utils.bandgrab(strppa,df)
+aft = utils.bandgrab(straft,df)
+ppe = utils.bandgrab(strppe,df)
+ros = utils.bandgrab(strros,df)
+hhw = utils.bandgrab(strhhw,df)
 
-#countyes = 0
-#for i in range(len(df)):
- #   a = utils.bandmem(df.Fband[i])
-  #  if a != 0:
-   #     for k in a:
-    #        if k == df.Bestgirl[i]:
-     #           countyes += 1
-countyes = 913        
-countno = totresponses - countyes
-relyes = float(countyes)/totresponses
-relno = float(countno)/totresponses
-counts=[countyes,countno]
-relativecounts = [relyes,relno]
-y_pos = np.arange(len(counts))
-labels =["Favourite girl is from favourite band", "Favourite girl isn't from favourite band"]
-
-plt.bar(y_pos,relativecounts,align='center',alpha=0.5)
-plt.xticks(y_pos,labels)
-plt.title("Spread of people whose favourite girl is from their favourite band")
-plt.show()
+counts,relcounts = utils.bestgirliter(df)
+ppacounts,pparelcounts = utils.bestgirliter(ppa)
+aftcounts,aftrelcounts = utils.bestgirliter(aft)
+ppecounts,pperelcounts = utils.bestgirliter(ppe)
+roscounts,rosrelcounts = utils.bestgirliter(ros)
+hhwcounts,hhwrelcounts = utils.bestgirliter(hhw)
 
 
-    
-print df.loc
+#plt.subplot2grid((2,3),(0,0))
+#y_pos = np.arange(len(counts))
+#labels =["Favourite girl is from favourite band", "Favourite girl isn't from favourite band"]
+#plt.bar(y_pos,relcounts,align='center',alpha=0.5)
+#plt.xticks(y_pos,labels)
+#plt.title("Spread of people whose favourite girl is from their favourite band (Overall)")
+
+print relcounts
+print pparelcounts
+print aftrelcounts
+print pperelcounts
+print rosrelcounts
+print hhwrelcounts
