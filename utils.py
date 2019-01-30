@@ -22,6 +22,10 @@ def agecount(x,y):
             count +=1 
     return count
 
+def gendergrab(x,y):
+    result = y.loc[y['gender']==x]
+    return result
+
 
 def allagecount(x):
     age1 = agecount(x,'Under 13')
@@ -51,6 +55,16 @@ def locgrab(x,y):
     result = y.loc[y['location']==x]
     return result
 
+def regiongrab(x,y):
+        if x == strrjp:
+            result = y.loc[y['StatusJP']== "Yes"]
+        elif x == strrww:
+            result = y.loc[y['StatusWW']== "Yes"]
+        elif x==strrtw:
+            result = y.loc[y['StatusTW']== "Yes"]
+        elif x==strrkr:
+            result = y.loc[y['StatusKR']== "Yes"]
+        return result
 def bandmem(x):
     if x == strppa:
         return ppamem
@@ -85,3 +99,7 @@ def bestgirliter(x):
     results = [resultyes,resultno]
     relresults = [relyes,relno]
     return results,relresults
+def plotter23(x,reason,norm,y):
+    plt.subplot2grid((2,3),y)
+    x.value_counts(normalize=norm).plot(kind="bar",alpha=0.5,rot=45)
+    plt.title(reason)

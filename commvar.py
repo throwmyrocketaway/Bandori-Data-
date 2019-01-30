@@ -48,6 +48,12 @@ strcam = "Central America"
 stroce = "Oceania"
 strsas = "South Asia"
 
+# Regions as variables
+strrjp = "JP"
+strrww = "WW"
+strrtw = "TW"
+strrkr = "KR"
+
 # Girls as variables, stored within band arrays
 
 kasumi = "Toyama Kasumi"
