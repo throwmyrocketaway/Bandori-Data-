@@ -99,6 +99,18 @@ def bestgirliter(x):
     results = [resultyes,resultno]
     relresults = [relyes,relno]
     return results,relresults
+
+def banditer(x):
+    tot = len(x)
+    resultyes = 0
+    for i in range(tot):
+        if x.Fband.iloc[i]==x.Csong.iloc[i]:
+            resultyes +=1
+    resultno = tot-resultyes
+    relyes = float(resultyes)/tot
+    relno = float(resultno)/tot
+    return [resultyes,resultno], [relyes,relno]
+
 def plotter23(x,reason,norm,y):
     plt.subplot2grid((2,3),y)
     x.value_counts(normalize=norm).plot(kind="bar",alpha=0.5,rot=45)
